@@ -78,7 +78,7 @@ export default function GuessItemContent({
           <Button color="light" className="border-black" pill>
             <div className="flex items-center">
               {renderHeartSVG()}
-              <div className="font-bold ml-1">Save for later</div>
+              <div className="font-bold ml-1">Save First</div>
             </div>
           </Button>
           <Button
@@ -87,7 +87,7 @@ export default function GuessItemContent({
             className="border-black"
             pill
           >
-            <div className="font-bold">Check it out</div>
+            <div className="font-bold">Shop Now</div>
           </Button>
         </div>
       </div>

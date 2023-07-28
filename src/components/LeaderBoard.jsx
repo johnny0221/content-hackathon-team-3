@@ -32,7 +32,7 @@ export default function LeaderBoard() {
           <div className="text-2xl font-bold">#29</div>
         </div>
       </div>
-      <div className="h-auto p-5 flex flex-col items-center bg-white shadow-xl rounded-lg">
+      <div className="h-auto m-1 p-5 flex flex-col items-center bg-white shadow-xl rounded-lg">
         <Record name="Player 1" points={300} photo={p1} first />
         <Record name="Player 2" points={295} photo={p2} index={1} />
         <Record name="Player 4" points={280} photo={p3} index={2} />

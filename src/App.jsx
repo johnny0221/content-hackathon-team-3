@@ -1,8 +1,7 @@
 import { Button } from "flowbite-react";
-import { useState, useEffect, useRef } from "react";
+import { useState } from "react";
 import GuessItemResult from "./components/GuessItemResult";
 import GuessChoices from "./components/GuessChoices";
-import GuessResult from "./components/GuessResult";
 import GuessItemContent from "./components/GuessItemContent";
 import LeaderBoard from "./components/LeaderBoard";
 import FinishPage from "./components/FinishPage";
@@ -10,12 +9,13 @@ import { questions } from "./constants/questions";
 import { pageStates } from "./constants/page";
 import next from "./assets/next.svg";
 import CountdownBar from "./components/CountdownBar";
+import Entry from "./components/Entry";
 import "./App.css";
 
 const lastRound = 4;
 
 function App() {
-  const [pageState, setPageState] = useState(pageStates.question);
+  const [pageState, setPageState] = useState(pageStates.entry);
   const [round, setRound] = useState(0);
   const [isAnswered, setIsAnswered] = useState(false);
   const [isCorrect, setIsCorrect] = useState(false);
@@ -45,6 +45,8 @@ function App() {
     setIsCorrect(false);
     setSelectedChoice(null);
   };
+
+  const renderEntry = () => <Entry setPageState={setPageState} />;
 
   const renderQuestionPage = () => (
     <div className="grid grid-cols-12 gap-4 p-5">
@@ -112,6 +114,7 @@ function App() {
   );
 
   const renderMap = {
+    [pageStates.entry]: renderEntry,
     [pageStates.question]: renderQuestionPage,
     [pageStates.finish]: renderFinishPage,
     [pageStates.leaderboard]: renderLeaderBoardPage,
