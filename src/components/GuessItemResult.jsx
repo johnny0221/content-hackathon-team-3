@@ -5,7 +5,7 @@ const renderHeartSVG = () => (
     viewBox="0 0 16 16"
     fill="none"
     xmlns="http://www.w3.org/2000/svg"
-    className="w-6 h-6"
+    className="w-4 h-4"
   >
     <path
       d="M7.48742 4.04747L8.00004 4.52745L8.51266 4.04747C9.82598 2.81775 11.9727 2.81826 13.2854 4.0489C13.9056 4.63037 14.2498 5.54072 14.2505 6.502C14.2512 7.45763 13.9122 8.36277 13.2996 8.94465L8.00021 13.5099L2.70238 8.94298C2.08953 8.3609 1.75023 7.45594 1.7505 6.50081C1.75077 5.54011 2.09456 4.63031 2.71472 4.0489C4.02737 2.81826 6.1741 2.81775 7.48742 4.04747Z"
@@ -75,7 +75,7 @@ export default function GuessItemContent({
           </div>
         </div>
         <div className="mt-3 flex justify-around items-center">
-          <Button color="light" className="border-black" pill>
+          <Button size="xs" color="light" className="border-black" pill>
             <div className="flex items-center">
               {renderHeartSVG()}
               <div className="font-bold ml-1">Save First</div>
@@ -85,6 +85,7 @@ export default function GuessItemContent({
             onClick={() => window.open(question.redirectLink)}
             color="light"
             className="border-black"
+            size="xs"
             pill
           >
             <div className="font-bold">Shop Now</div>
