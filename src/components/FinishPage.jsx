@@ -13,7 +13,7 @@ export default function FinishPage({ allCorrect, setPageState }) {
   return (
     <div className={`p-2 min-h-screen ${backgroundColor}`}>
       <div className="flex justify-center items-center">
-        <div className="mt-36 flex justify-center items-center w-64 h-64 border border-gray-100 rounded-full p-5 bg-white">
+        <div className="mt-24 flex justify-center items-center w-64 h-64 border border-gray-100 rounded-full p-5 bg-white">
           <img className="w-48 h-48" src={imageSrc} alt="" />
         </div>
       </div>
@@ -26,7 +26,7 @@ export default function FinishPage({ allCorrect, setPageState }) {
       <div className="flex justify-center items-center">
         <Button
           onClick={() => setPageState(pageStates.leaderboard)}
-          className="mt-36 w-4/5"
+          className="mt-12 w-4/5"
           color="dark"
           pill
         >
