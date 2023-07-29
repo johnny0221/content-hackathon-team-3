@@ -1,5 +1,4 @@
 import { Button } from 'flowbite-react';
-import { useEffect, useRef } from 'react';
 
 const renderHeartSVG = () => (
   <svg
@@ -20,7 +19,6 @@ export default function GuessItemContent({
   isCorrect,
   isExceedTimeLimit,
 }) {
-  const bottomRef = useRef(null);
   const correctPrice = question.choices.filter((choice) => choice.answer)[0]
     .content;
 
@@ -45,10 +43,6 @@ export default function GuessItemContent({
       return 'No worries. You’ll get another shot at the next question!';
     }
   };
-
-  useEffect(() => {
-    bottomRef.current.scrollIntoView({ behavior: 'smooth' });
-  }, []);
 
   return (
     <div className='mt-8'>
@@ -87,7 +81,6 @@ export default function GuessItemContent({
             </div>
           </Button>
           <Button
-            ref={bottomRef}
             onClick={() => window.open(question.redirectLink)}
             color='light'
             className='border-black'

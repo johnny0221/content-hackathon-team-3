@@ -1,5 +1,5 @@
 import { Button } from 'flowbite-react';
-import { useState } from 'react';
+import { useState, useRef } from 'react';
 import GuessItemResult from './components/GuessItemResult';
 import GuessChoices from './components/GuessChoices';
 import GuessItemContent from './components/GuessItemContent';
@@ -23,6 +23,7 @@ function App() {
   const [wrongGuesses, setWrongGuesses] = useState(0);
   const [selectedChoice, setSelectedChoice] = useState(null);
   const [isExceedTimeLimit, setIsExceedTimeLimit] = useState(false);
+  const bottomRef = useRef(null);
 
   const handleClickNextButton = () => {
     setRound((prevRound) => prevRound + 1);
@@ -30,6 +31,7 @@ function App() {
     setIsCorrect(false);
     setIsExceedTimeLimit(false);
     setSelectedChoice(null);
+    bottomRef.current.scrollIntoView({ behavior: 'smooth' });
   };
 
   const handleClickFinishButton = () => {
@@ -92,6 +94,7 @@ function App() {
               }
               className='mt-8 w-1/2'
               color='dark'
+              ref={bottomRef}
               pill>
               <div className='flex justify-center items-center'>
                 <div className='font-bold text-center'>
