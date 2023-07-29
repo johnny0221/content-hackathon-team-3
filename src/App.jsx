@@ -1,5 +1,5 @@
 import { Button } from 'flowbite-react';
-import { useState, useEffect } from 'react';
+import { useState } from 'react';
 import GuessItemResult from './components/GuessItemResult';
 import GuessChoices from './components/GuessChoices';
 import GuessItemContent from './components/GuessItemContent';
@@ -24,18 +24,13 @@ function App() {
   const [selectedChoice, setSelectedChoice] = useState(null);
   const [isExceedTimeLimit, setIsExceedTimeLimit] = useState(false);
 
-  useEffect(() => {
-    if (isAnswered) {
-      window.scrollTo(0, document.body.scrollHeight);
-    }
-  }, [isAnswered]);
-
   const handleClickNextButton = () => {
     setRound((prevRound) => prevRound + 1);
     setIsAnswered(false);
     setIsCorrect(false);
     setIsExceedTimeLimit(false);
     setSelectedChoice(null);
+    window.scrollTo(0, document.body.scrollHeight);
   };
 
   const handleClickFinishButton = () => {
