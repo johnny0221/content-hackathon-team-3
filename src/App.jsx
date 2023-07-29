@@ -1,5 +1,5 @@
 import { Button } from 'flowbite-react';
-import { useState, useRef } from 'react';
+import { useState, useRef, useEffect } from 'react';
 import GuessItemResult from './components/GuessItemResult';
 import GuessChoices from './components/GuessChoices';
 import GuessItemContent from './components/GuessItemContent';
@@ -31,8 +31,13 @@ function App() {
     setIsCorrect(false);
     setIsExceedTimeLimit(false);
     setSelectedChoice(null);
-    bottomRef.current.scrollIntoView({ behavior: 'smooth' });
   };
+
+  useEffect(() => {
+    if (isAnswered) {
+      bottomRef.current.scrollIntoView({ behavior: 'smooth' });
+    }
+  }, [isAnswered]);
 
   const handleClickFinishButton = () => {
     setPageState(pageStates.finish);
