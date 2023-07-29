@@ -1,4 +1,5 @@
 import { Button } from 'flowbite-react';
+import { useEffect } from 'react';
 
 const renderHeartSVG = () => (
   <svg
@@ -43,6 +44,10 @@ export default function GuessItemContent({
       return 'No worries. You’ll get another shot at the next question!';
     }
   };
+
+  useEffect(() => {
+    window.scrollTo(0, document.body.scrollHeight);
+  }, []);
 
   return (
     <div className='mt-8'>

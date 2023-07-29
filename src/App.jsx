@@ -30,7 +30,6 @@ function App() {
     setIsCorrect(false);
     setIsExceedTimeLimit(false);
     setSelectedChoice(null);
-    window.scrollTo(0, document.body.scrollHeight);
   };
 
   const handleClickFinishButton = () => {
