@@ -36,15 +36,13 @@ export default function LeaderBoard() {
         <Record name='Player 1' points={300} photo={p1} first />
         <Record name='Player 2' points={295} photo={p2} index={1} />
         <Record name='Player 4' points={280} photo={p3} index={2} />
-        <Record name='Player 5' points={275} photo={p3} index={3} />
-        <Record name='Player 6' points={250} photo={p3} index={4} />
       </div>
-      <div className='mt-1 flex justify-around items-center'>
-        <Button className='mt-8' color='light' pill>
-          <div className='text-sm font-bold text-center'>Share</div>
+      <div className='mt-8 flex justify-around items-center'>
+        <Button color='light' pill>
+          <div className='text-xs font-bold text-center'>Share</div>
         </Button>
-        <Button className='mt-8 w-1/2' color='dark' pill>
-          <div className='ml-1 text-sm font-bold text-center'>
+        <Button color='dark' pill>
+          <div className='text-xs font-bold text-center'>
             <a href='shopback://open'>Discover more</a>
           </div>
         </Button>
