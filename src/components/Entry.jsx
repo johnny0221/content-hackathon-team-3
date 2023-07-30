@@ -5,7 +5,7 @@ export default function Entry({ setPageState }) {
   return (
     <div className='relative w-full min-h-screen'>
       <div className="absolute inset-0 min-h-screen bg-[url('/src/assets/uhs.PNG')] bg-no-repeat bg-cover z-10"></div>
-      <div className='absolute inset-0 min-h-screen bg-white opacity-90 z-20'></div>
+      <div className='absolute inset-0 min-h-screen bg-white opacity-40 z-20'></div>
       <div className='absolute w-full min-h-screen z-30 flex flex-col p-5'>
         <div className='mt-2 text-start font-bold text-5xl leading-relaxed'>
           How well do you know our products and stores? Take this quiz to find
