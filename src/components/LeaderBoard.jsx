@@ -13,16 +13,16 @@ import { Button } from 'flowbite-react';
 export default function LeaderBoard() {
   return (
     <div className='flex flex-col p-5'>
-      <div className='mt-10 flex justify-center'>
+      <div className='mt-6 flex justify-center'>
         <div className='flex justify-center items-center border-2 rounded-full border-gray-1 w-20 h-20'>
           <img className='w-10 h-10' src={face} alt='' />
         </div>
       </div>
-      <div className='mt-4 flex justify-center items-center'>
+      <div className='mt-3 flex justify-center items-center'>
         <div className='text-sm font-bold'>TheAmazingShopbacker777</div>
         <img className='w-5 h-5 ml-1' src={pen} alt='' />
       </div>
-      <div className='mt-5 flex justify-around'>
+      <div className='mt-3 flex justify-around'>
         <div className='flex flex-col justify-center items-center'>
           <div className='text-sm text-gray-400 font-semibold'>Your score</div>
           <div className='text-2xl font-bold'>300</div>
@@ -37,7 +37,7 @@ export default function LeaderBoard() {
         <Record name='Player 2' points={295} photo={p2} index={1} />
         <Record name='Player 4' points={280} photo={p3} index={2} />
       </div>
-      <div className='mt-8 flex justify-around items-center'>
+      <div className='mt-6 flex justify-around items-center'>
         <Button color='light' pill>
           <div className='text-xs font-bold text-center'>Share</div>
         </Button>
@@ -47,8 +47,8 @@ export default function LeaderBoard() {
           </div>
         </Button>
       </div>
-      <div className='mt-8 border border-t-4 border-gray-100'></div>
-      <div className='mt-8'>
+      <div className='mt-6 border border-t-4 border-gray-100'></div>
+      <div className='mt-6'>
         <div className='text-lg text-start font-bold'>
           Treat yourself to something nice?
         </div>
