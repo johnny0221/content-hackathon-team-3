@@ -6,10 +6,10 @@ import { pageStates } from "../constants/page";
 export default function FinishPage({ allCorrect, setPageState }) {
   const backgroundColor = allCorrect ? "bg-green-300" : "bg-blue-300";
   const imageSrc = allCorrect ? finish1 : finish2;
-  const title = allCorrect ? "You're a pricing prodigy" : "Good Effort";
+  const title = allCorrect ? "You’re a quiz champ!" : "Good Effort";
   const content = allCorrect
-    ? "Awesome job on getting all the prices right! Curious to know the ranking?"
-    : "You have tried your best so that's what matters, Hope you had fun!";
+    ? "Awesome job on acing this! Curious to know your ranking?"
+    : "Some tricky ones there we know. What matters is you tried your best. Hope you had fun!";
   return (
     <div className={`p-2 min-h-screen ${backgroundColor}`}>
       <div className="flex justify-center items-center">
